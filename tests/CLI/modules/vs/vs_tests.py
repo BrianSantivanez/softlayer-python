@@ -947,3 +947,15 @@ class VirtTests(testing.TestCase):
     def test_monitoring_vs(self):
         result = self.run_command(['vs', 'monitoring', '1234'])
         self.assert_no_fail(result)
+
+    def test_github_1622(self):
+        mock = self.set_mock('SoftLayer_Virtual_Guest', 'getObject')
+        filename = "{}/github_issues/1622.json".format(testing.FIXTURE_PATH)
+        print("FILE: {}".format(filename))
+        mockFile = open(filename)
+        github1622 = json.load(mockFile)
+        mock.return_value = github1622
+        print(github1622)
+        result = self.run_command(['vs', 'detail', '1234'])
+        self.assert_no_fail(result)
+        self.assertIn("INSTALL_COMPLETE", result.output)
