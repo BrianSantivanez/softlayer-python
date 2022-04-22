@@ -80,26 +80,7 @@
     {
         "id": 183001346
     },
-    "lastTransaction":[
-    {
-        "createDate": "2022-04-22T21:53:23+01:00",
-        "elapsedSeconds": 362,
-        "guestId": 61354745,
-        "hardwareId": "",
-        "id": 280584324,
-        "modifyDate": "2022-04-22T23:04:06+01:00",
-        "statusChangeDate": "2022-04-22T23:04:06+01:00",
-        "transactionGroup":
-        {
-            "name": "Cloud Instance OS Reload"
-        },
-        "transactionStatus":
-        {
-            "averageDuration": ".22",
-            "friendlyName": "Software install is finished",
-            "name": "INSTALL_COMPLETE"
-        }
-    }],
+    "lastTransaction": [],
     "networkComponents":
     [
         {
